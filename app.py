@@ -3,13 +3,14 @@ import re
 import requests
 from typing import List, Dict, Annotated, TypedDict, Literal
 import os
-from langchain_core.tools import tool
-from langchain_core.messages import HumanMessage, AIMessage, BaseMessage
-from langchain_core.prompts import PromptTemplate
-from langchain_core.runnables import RunnablePassthrough
+from langchain.tools import tool
+from langchain.schema import HumanMessage, AIMessage, BaseMessage
+from langchain.prompts import PromptTemplate
+from langchain.runnables import RunnablePassthrough
+
+# Community & external tools
 from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_community.utilities.semanticscholar import SemanticScholarAPIWrapper
-from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound, TranscriptsDisabled, VideoUnavailable
 from langchain_community.tools.tavily_search import TavilySearchResults
 import operator
 from langchain_google_genai import ChatGoogleGenerativeAI
