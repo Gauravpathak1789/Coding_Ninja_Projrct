@@ -1,12 +1,16 @@
 # Python version
 python>=3.11
 pip==24.0
-joblib==1.5.2
+
+# Core ML / NLP
 numpy==2.2.6
 pandas==2.3.2
+joblib==1.5.2
 transformers==4.56.0
 sentence-transformers==5.1.0
 huggingface-hub==0.34.4
+
+# LangChain ecosystem
 langchain==0.3.27
 langchain-core==0.3.75
 langchain-google-genai==2.1.8
@@ -21,10 +25,14 @@ langgraph-prebuilt==0.6.4
 langgraph-sdk==0.2.6
 langgraph-supervisor==0.0.29
 langsmith==0.4.7
+
+# Streamlit / UI
 streamlit==1.42.2
 markdown-it-py==4.0.0
 mdurl==0.1.2
 pygments==2.19.2
+
+# PDF
 PyPDF2==3.0.1
 pdfplumber==0.11.7
 pdfminer.six==20250506
@@ -36,17 +44,20 @@ aiohttp==3.12.15
 google-api-core==2.25.1
 google-auth==2.40.3
 google-search-results==2.4.2
-
-pillow==11.3.0
-tqdm==4.67.1
-matplotlib==3.10.6
-seaborn==0.12.2
-joblib==1.5.2
-python-dotenv==1.1.1
 beautifulsoup4==4.13.5
 lxml==6.0.1
 
+# Images / plots
+pillow==11.3.0
+matplotlib==3.10.6
+seaborn==0.12.2
+tqdm==4.67.1
+
+# Security / serialization
 pyyaml==6.0.2
 cryptography==45.0.7
 bcrypt==4.3.0
 dataclasses-json==0.6.7
+
+# Environment variables
+python-dotenv==1.1.1
