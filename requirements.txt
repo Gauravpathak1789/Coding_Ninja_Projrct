@@ -1,9 +1,7 @@
 # Core packages
 python-dotenv==1.1.1
-numpy==1.25.2
+numpy>=1.26.0
 pandas==2.3.2
-matplotlib==3.7.2
-scipy==1.11.1
 
 # ML & NLP
 langchain==0.3.75
@@ -53,4 +51,5 @@ youtube-transcript-api==1.2.2
 langchain-community==0.3.29
 tavily-python==0.7.11
 serpapi==0.1.5
+
 
