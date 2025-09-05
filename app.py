@@ -1,22 +1,29 @@
-import streamlit as st
-import re
-import requests
+# Standard libraries
 from typing import List, Dict, Annotated, TypedDict, Literal
 import os
+import time
+from urllib.parse import urlparse, parse_qs
+
+# LangChain core functionality (new imports)
 from langchain.tools import tool
 from langchain.schema import HumanMessage, AIMessage, BaseMessage
 from langchain.prompts import PromptTemplate
 from langchain.runnables import RunnablePassthrough
 
-# Community & external tools
+# LangChain community tools & utilities
 from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_community.utilities.semanticscholar import SemanticScholarAPIWrapper
 from langchain_community.tools.tavily_search import TavilySearchResults
-import operator
+
+# Google GenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
-import time
-from urllib.parse import urlparse, parse_qs
-import traceback
+
+# YouTube
+from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound, TranscriptsDisabled, VideoUnavailable
+
+# Networking
+import requests
+
 
 # Load environment variables
 
