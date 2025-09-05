@@ -2,7 +2,6 @@ import streamlit as st
 import re
 import requests
 from typing import List, Dict, Annotated, TypedDict, Literal
-from dotenv import load_dotenv
 import os
 from langchain_core.tools import tool
 from langchain_core.messages import HumanMessage, AIMessage, BaseMessage
@@ -19,7 +18,12 @@ from urllib.parse import urlparse, parse_qs
 import traceback
 
 # Load environment variables
-load_dotenv()
+
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+TAVILY_API_KEY = os.environ.get("TAVILY_API_KEY")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+HUGGINGFACEHUB_API_TOKEN = os.environ.get("HUGGINGFACEHUB_API_TOKEN")
+SERPER_API_KEY = os.environ.get("SERPER_API_KEY")
 
 # Page configuration
 st.set_page_config(
