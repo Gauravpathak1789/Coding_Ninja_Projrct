@@ -69,8 +69,9 @@ Your supervisor uses reasoning to decide the next tool → this is **ReAct (Reas
 
 ## ⚡ Setup & Run Instructions
 
-1️⃣ Clone the repository
+
 ```bash
+1️⃣ Clone the repository
 git clone https://github.com/your-username/multi-agent-assistant.git
 cd multi-agent-assistant
 
