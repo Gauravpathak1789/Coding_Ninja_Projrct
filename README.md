@@ -3,22 +3,21 @@
 
 Building an AI-powered multi-agent assistant that can:
 
-Explain educational concepts with supporting YouTube content
+📖 Explain educational concepts with supporting YouTube content
 
-Perform research summarization (Semantic Scholar + video references)
+🔬 Perform research summarization (Semantic Scholar + video references)
 
-Assist with resume generation and provide improvement resources
+📝 Assist with resume generation and provide improvement resources
 
-Fetch and summarize latest news with context videos
+📰 Fetch and summarize latest news with context videos
 
-Analyze and answer questions from YouTube transcripts
+🎥 Analyze and answer questions from YouTube transcripts
 
-Provide Q&A over uploaded PDFs using RAG (Retrieval-Augmented Generation)
+📄 Provide Q&A over uploaded PDFs using RAG (Retrieval-Augmented Generation)
 
-This project showcases how LangChain, HuggingFace, Tavily, and Streamlit can be combined into a unified intelligent assistant.
+👉 This project showcases how LangChain, HuggingFace, Tavily, and Streamlit can be combined into a unified intelligent assistant.
 
 🧩 Agent Interactions
-
 🎓 Education Agent
 
 Takes user queries
@@ -77,13 +76,17 @@ LaTeX → Resume generation
 
 ✅ Final Classification
 
-👉 This Project follows the “Supervisor (tool-calling)” pattern.:-
+👉 This project follows the “Supervisor (tool-calling)” pattern
 
-Each specialist is exposed as a tool.
+Each specialist is exposed as a tool
 
-A central LLM supervisor decides which tool/agent to invoke.
+A central LLM supervisor decides which tool/agent to invoke
 
-Execution flow is Reason → Tool → Reason → Tool, which matches ReAct-style handoffs.
+Execution flow is Reason → Tool → Reason → Tool, which matches ReAct-style handoffs
+
+🔹 ReAct Ability
+
+✅ Yes! Your supervisor uses reasoning to decide the next tool → this is ReAct (Reason + Act) applied through LangGraph tool-calling.
 
 
 🔹 ReAct Ability → ✅ Yes!
