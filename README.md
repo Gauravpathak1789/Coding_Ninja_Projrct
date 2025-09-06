@@ -55,8 +55,8 @@ Building an AI-powered **multi-agent assistant** that can:
 
 ---
 
-## ✅ Final Classification
-👉 This project follows the **Supervisor (tool-calling)** pattern:  
+## ✅ Multi-agent architecture
+👉 This project follows the **Supervisor (tool-calling)** system:  
 - Each specialist is exposed as a tool  
 - A central LLM supervisor decides which tool/agent to invoke  
 - Execution flow: **Reason → Tool → Reason → Tool** (ReAct-style handoffs)  
