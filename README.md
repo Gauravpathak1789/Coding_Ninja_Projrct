@@ -1,122 +1,97 @@
-🚀 Multi-Agent AI Assistant
-📌 Problem Statement
+# 🚀 Multi-Agent AI Assistant
 
-Building an AI-powered multi-agent assistant that can:
+## 📌 Problem Statement
+Building an AI-powered **multi-agent assistant** that can:
 
-📖 Explain educational concepts with supporting YouTube content
+- 📖 Explain educational concepts with supporting YouTube content
+- 🔬 Perform research summarization (Semantic Scholar + video references)
+- 📝 Assist with resume generation and provide improvement resources
+- 📰 Fetch and summarize latest news with context videos
+- 🎥 Analyze and answer questions from YouTube transcripts
+- 📄 Provide Q&A over uploaded PDFs using **RAG (Retrieval-Augmented Generation)**
 
-🔬 Perform research summarization (Semantic Scholar + video references)
+👉 This project showcases how **LangChain, HuggingFace, Tavily, and Streamlit** can be combined into a unified intelligent assistant.
 
-📝 Assist with resume generation and provide improvement resources
+---
 
-📰 Fetch and summarize latest news with context videos
+## 🧩 Agent Interactions
 
-🎥 Analyze and answer questions from YouTube transcripts
+### 🎓 Education Agent
+- Takes user queries
+- Returns explanations + relevant YouTube videos  
 
-📄 Provide Q&A over uploaded PDFs using RAG (Retrieval-Augmented Generation)
+### 🔬 Research Agent
+- Summarizes papers from Semantic Scholar
+- Provides supporting YouTube content  
 
-👉 This project showcases how LangChain, HuggingFace, Tavily, and Streamlit can be combined into a unified intelligent assistant.
+### 📝 Resume Agent
+- Generates a LaTeX-based resume
+- Suggests resume-building tutorials  
 
-🧩 Agent Interactions
-🎓 Education Agent
+### 📰 News Agent
+- Fetches top stories using Tavily or DuckDuckGo
+- Summarizes + provides related YouTube videos  
 
-Takes user queries
+### 🎥 Video Agent
+- Extracts YouTube transcripts
+- Allows Q&A on video content
+- Suggests related resources  
 
-Returns explanations + relevant YouTube videos
+### 📄 PDF Agent
+- Supports PDF upload
+- Performs Q&A with embeddings via **ChromaDB + HuggingFace**
 
-🔬 Research Agent
+---
 
-Summarizes papers from Semantic Scholar
+## ⚙️ Technologies Used
+- 🎨 **Streamlit** → Frontend UI  
+- 🔗 **LangChain / LangGraph** → Multi-agent orchestration  
+- 🤗 **HuggingFace Transformers** → Embeddings & NLP  
+- 🗄 **ChromaDB** → Vector storage for PDFs  
+- 🌐 **Tavily / DuckDuckGo** → News & web search  
+- 🎥 **YouTube APIs (pytube, transcript)** → Video analysis  
+- 📑 **Semantic Scholar API** → Research paper summaries  
+- 🖋 **LaTeX** → Resume generation  
 
-Provides supporting YouTube content
+---
 
-📝 Resume Agent
+## ✅ Final Classification
+👉 This project follows the **Supervisor (tool-calling)** pattern:  
+- Each specialist is exposed as a tool  
+- A central LLM supervisor decides which tool/agent to invoke  
+- Execution flow: **Reason → Tool → Reason → Tool** (ReAct-style handoffs)  
 
-Generates a LaTeX-based resume
+### 🔹 ReAct Ability
+✅ **Yes!**  
+Your supervisor uses reasoning to decide the next tool → this is **ReAct (Reason + Act)** applied through **LangGraph tool-calling**.  
 
-Suggests resume-building tutorials
+---
 
-📰 News Agent
+## ⚡ Setup & Run Instructions
 
-Fetches top stories using Tavily or DuckDuckGo
-
-Summarizes + provides related YouTube videos
-
-🎥 Video Agent
-
-Extracts YouTube transcripts
-
-Allows Q&A on video content
-
-Suggests related resources
-
-📄 PDF Agent
-
-Supports PDF upload
-
-Performs Q&A with embeddings via ChromaDB + HuggingFace
-
-⚙️ Technologies Used
-
-Streamlit → Frontend UI
-
-LangChain / LangGraph → Multi-agent orchestration
-
-HuggingFace Transformers → Embeddings & NLP
-
-ChromaDB → Vector storage for PDFs
-
-Tavily / DuckDuckGo → News & web search
-
-YouTube APIs (pytube, transcript) → Video analysis
-
-Semantic Scholar API → Research paper summaries
-
-LaTeX → Resume generation
-
-✅ Final Classification
-
-👉 This project follows the “Supervisor (tool-calling)” pattern
-
-Each specialist is exposed as a tool
-
-A central LLM supervisor decides which tool/agent to invoke
-
-Execution flow is Reason → Tool → Reason → Tool, which matches ReAct-style handoffs
-
-🔹 ReAct Ability
-
-✅ Yes! Your supervisor uses reasoning to decide the next tool → this is ReAct (Reason + Act) applied through LangGraph tool-calling.
-
-
-🔹 ReAct Ability → ✅ Yes!
-Your supervisor uses reasoning to decide the next tool → this is ReAct (Reason + Act) applied through LangGraph tool-calling.
-
-⚡ Setup & Run Instructions
-
-Clone the repository
-
+### 1️⃣ Clone the repository
+```bash
 git clone https://github.com/your-username/multi-agent-assistant.git
 cd multi-agent-assistant
 
-
-I have Created a virtual environment
-
+2️⃣ Create a virtual environment
 python -m venv langvenv
-langvenv\Scripts\activate      # Windows
+langvenv\Scripts\activate   # Windows
+source langvenv/bin/activate   # Linux/Mac
 
-
-Installed  dependencies
-
+3️⃣ Install dependencies
 pip install -r requirements.txt
 
+4️⃣ Setup environment variables
 
-Set up environment variables (.env) (but in streamlit i have to setup it in the streamlit .toml file)
+Add API keys in a .env file
 
+For Streamlit Cloud, configure inside .streamlit/secrets.toml
 
-Run the Streamlit app
-
+5️⃣ Run the Streamlit app
 streamlit run app.py
 
+6️⃣ Open in Browser
 
-🎉 Open your browser at http://localhost:8501
+🎉 Open your browser at: http://localhost:8501
+
