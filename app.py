@@ -3,7 +3,6 @@ import re
 import tempfile
 import requests
 from typing import List, Dict, Annotated, TypedDict, Literal
-from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 import os
 from langchain_core.tools import tool
@@ -24,12 +23,13 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from urllib.parse import urlparse, parse_qs
 
 # NEW CODE (add this):
-load_dotenv()
-hf_token = os.getenv("HF_TOKEN")
-GOOGLE_API_KEY= os.getenv("GOOGLE_API_KEY")
-YOUTUBE_API_KEY= os.getenv("YOUTUBE_API_KEY")
-GroQ_API_KEY= os.getenv("GROQ_API_KEY")
 
+
+hf_token= st.secrets["HF_TOKEN"]
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+YOUTUBE_API_KEY = st.secrets["YOUTUBE_API_KEY"]
+TAVILY_API_KEY = st.secrets["TAVILY_API_KEY"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
 
 
@@ -1563,3 +1563,4 @@ def main():
 # Run the app
 if __name__ == "__main__":
     main()
+
